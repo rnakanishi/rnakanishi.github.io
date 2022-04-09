@@ -1,0 +1,8 @@
++++
+title = "Blog Index"
+template = "index.html"
+render = true
+sort_by = "date"
+paginate_by = 10
++++
+ This is blog index
