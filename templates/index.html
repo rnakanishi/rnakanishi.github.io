@@ -7,7 +7,8 @@
         {% if page.extra.image %}
           <figure class="post-cover">
             <a href="{{ page.permalink }}">
-              <img src="{{ page.extra.image }}">
+              {% set image = resize_image(path=page.path ~ page.extra.image, height=250, width=1000) %}
+              <img src="{{ image.url }}">
             </a>
           </figure>
         {% endif %}
