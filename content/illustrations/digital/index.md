@@ -1,13 +1,11 @@
 +++
 title=  "Digital painting"
 author= "rnakanishi"
-date=   2016-02-27 14:37:44
+date=   2022-04-10 14:37:44
 # tags = ["update", "blog", "japan"]
-
-assets=[]
 
 [extra]
 summary= ""
 +++
 
-{{ bigger_gallery() }}
+{{ bigger_gallery(reverse=true) }}

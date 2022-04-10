@@ -16,7 +16,7 @@
         </div>
         <div class="post-content">
               <p>
-                {% for asset in page.assets -%}
+                {% for asset in page.assets | reverse -%}
                   {% if loop.index > 3 %}
                     {% break %}
                   {% endif %}
