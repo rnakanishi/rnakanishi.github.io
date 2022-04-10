@@ -1,7 +1,6 @@
 +++
 title = "Publications Index"
-template = "index.html"
-render = true
+template = "pub_index.html"
 sort_by = "date"
 paginate_by = 10
 +++

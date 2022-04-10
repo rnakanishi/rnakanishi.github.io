@@ -127,8 +127,9 @@ img {
 .content {
   height: auto;
   float: right;
-  width: 60%;
+  width: 45%;
   margin-top: 60px;
+  margin-right: 15%;
 }
 
 .page-top {
@@ -195,6 +196,7 @@ img {
   }
 }
 
+
 #sidebar {
   width: 33%;
   -webkit-background-size: cover;
@@ -203,7 +205,7 @@ img {
   height: 100%;
   transition: 0.8s;
   top: 0;
-  left: 0;
+  left: 3.5%;
   position: fixed;
   z-index: 4;
   border-right: 1px solid #f2f2f2;
@@ -267,6 +269,15 @@ img {
 .post {
   background-color: #FFF;
   margin: 30px;
+
+  .post-cover{
+    margin: 0px;
+    float: left;
+
+    figure{
+      padding: 0;
+    }
+  }
 
   .post-title {
     h1 {
