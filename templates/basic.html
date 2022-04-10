@@ -39,6 +39,9 @@
     {% for key, value in config.extra.social %}
       <li><a href="https://{{ key }}.com/{{ value }}"><i class="fab fa-{{key}}"></i></a></li>
     {% endfor %}
+    {% if config.extra.email %}
+      <li><a href="mailto:{{ config.extra.email }}"><i class="fa fa-envelope"></i></a></li>
+    {% endif %}
   </ul>
   <div class="footer">
     {% block footer %}
