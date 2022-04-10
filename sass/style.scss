@@ -40,8 +40,20 @@ a:hover, a:active {
 img {
   max-width: 100%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+.border{
+  border-radius: 15%; 
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*basic styles ends*/
 
 
@@ -274,6 +286,7 @@ img {
 .post {
   background-color: #FFF;
   margin: 30px;
+  text-align: justify;
 
   .post-cover{
     margin: 0px;
