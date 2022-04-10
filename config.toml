@@ -17,12 +17,16 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 
+[extra.show]
+archive= false
+
 [languages.en.translations]
 about = "About"
 home = "Home"
 tags = "Tags"
 blog = "Blog"
 publications = "Publications"
+illustrations = "Illustrations"
 archive = "Archive"
 links = "Links"
 next_page = "Next Page"
