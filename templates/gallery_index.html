@@ -1,0 +1,74 @@
+{% extends "basic.html" %}
+
+{% block content %}
+    {% for page in paginator.pages %}
+      <section class="post animated fadeInDown">
+        
+        {% if page.extra.image %}
+          <figure class="post-cover">
+            <a href="{{ page.permalink }}">
+              <img src="{{ page.extra.image }}">
+            </a>
+          </figure>
+        {% endif %}
+        <div class="post-title">
+          <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+        </div>
+        <div class="post-content">
+              <p>
+                {% for asset in page.assets -%}
+                  {% if loop.index > 3 %}
+                    {% break %}
+                  {% endif %}
+                  {%- if asset is matching("[.](jpg|png)$") -%}
+                    {% set image = resize_image(path=asset, width=240, height=180) %}
+                    <a href="{{ page.permalink }}" target="_blank">
+                      <img src="{{ image.url }}" />
+                    </a>
+                  {%- endif %}
+                {%- endfor %}
+              </p>
+        </div>
+        <div class="post-footer">
+              <div class="meta">
+                <div class="info">
+                  {% if page.date %}
+                    <i class="far fa-sun"></i>
+                    <span class="date">
+                      {{ page.date | date(format=trans(key="date_format")) }}
+                    </span>
+                  {% endif %}
+                  {% if config.extra.comment %}
+					          <i class="far fa-comments"></i>
+                    <a href="{{ page.permalink }}#comments">Comments</a>
+                  {% endif %}
+                  {% if page.taxonomies.tags %}
+                    <i class="fas fa-tags"></i>
+                    {% for tag in page.taxonomies.tags %}
+                      <a class="tag" href="{{ get_url(path="@/_index.md") }}tags/{{tag}}">&nbsp;{{tag}}</a>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+        </div>
+      </section>
+    {% endfor %}
+    <div class="pagination">
+		  <ul class="clearfix">
+        {% if paginator.next %}
+          <li class="next pagbuttons">
+            <a class="btn" role="navigation" href="{{ paginator.next }}">
+              {{ trans(key="next_page") }}
+            </a>
+          </li>
+        {% endif %}
+        {% if paginator.previous %}
+          <li class="pre pagbuttons">
+            <a class="btn" role="navigation" href="{{ paginator.previous }}">
+              {{ trans(key="last_page") }}
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+{% endblock content %}
