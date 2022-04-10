@@ -3,7 +3,7 @@
 {% block content %}
     {% for page in paginator.pages %}
       <section class="post animated fadeInDown">
-
+        
         {% if page.extra.image %}
           <figure class="post-cover">
             <a href="{{ page.permalink }}">
@@ -12,26 +12,16 @@
           </figure>
         {% endif %}
         <div class="post-title">
-                <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+          <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
         </div>
         <div class="post-content">
               <p>
                 {% if page.extra.summary %}
-                  {{ page.extra.summary | safe | striptags }}                  
+                    {{ page.extra.summary | safe | striptags }}
                 {% else %}
-                {{ page.content | safe | striptags | truncate(length=100) }}
+                    {{ page.content | safe | striptags | truncate(length=100) }}
                 {% endif %}
               </p>
-              <p>
-                {% if page.extra.summary %}
-                  {%for author in page.extra.authors%}
-                    <a href="{{author.site}}">{{author.name|safe|striptags}}</a>&nbsp;&nbsp;
-                  {%endfor%}
-                {%endif%}
-              </p>
-              {% if page.extra.conference %}
-              <p><i> {{page.extra.conference}} </i></p>
-              {% endif %}
         </div>
         <div class="post-footer">
               <div class="meta">

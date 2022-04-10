@@ -53,10 +53,13 @@
       <li><a {% if current_path is starting_with("/about") %}class="current"{% endif %} href="{{ get_url(path="@/about/_index.md") }}">{{ trans(key="about") }}</a></li>
       <li><a {% if current_path is starting_with("/blog") %}class="current"{% endif %} href="{{ get_url(path="@/blog/_index.md") }}">{{ trans(key="blog") }}</a></li>
       <li><a {% if current_path is starting_with("/publications") %}class="current"{% endif %} href="{{ get_url(path="@/publications/_index.md") }}">{{ trans(key="publications") }}</a></li>
+      <li><a {% if current_path is starting_with("/illustrations") %}class="current"{% endif %} href="{{ get_url(path="@/illustrations/_index.md") }}">{{ trans(key="illustrations") }}</a></li>
       {%- if config.extra.show.tags -%}
       <li><a {% if current_path is starting_with("/tags") %}class="current"{% endif %} href="{{ get_url(path="@/_index.md") }}tags">{{ trans(key="tags") }}</a></li>
       {%- endif -%}
+      {% if config.extra.show.archive %}
       <li><a {% if current_path is starting_with("/archive") %}class="current"{% endif %} href="{{ get_url(path="@/archive/_index.md") }}">{{ trans(key="archive") }}</a></li>
+      {% endif %}
       {%- if config.extra.show.links -%}
       <li><a {% if current_path is starting_with("/links") %}class="current"{% endif %} href="{{ get_url(path="@/links/_index.md") }}">{{ trans(key="links") }}</a></li>
       {%- endif -%}
@@ -70,7 +73,6 @@
   </div>
   <div class="autopagerize_page_element">
     <div class="content">
-  
     {% block content %} 
     {% endblock content %}
     </div>

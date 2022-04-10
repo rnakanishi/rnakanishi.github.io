@@ -17,6 +17,8 @@ image= "/publications/siggraph-2020.png"
 summary= "We introduce a liquid simulation approach that combines an adaptive pressure projection solver with PIC. The solver relies on RBF-FD to approximate the pressure field and its gradients in quadtrees/octrees."
 +++
 
+![teaser image](/publications/siggraph-2020.png)
+
 # Abstract
 We introduce a novel liquid simulation approach that combines a spatially adaptive pressure projection solver with the Particle-in-Cell (PIC) method. The solver relies on a generalized version of the Finite Difference (FD) method to approximate the pressure field and its gradients in tree-based grid discretizations, possibly non-graded. In our approach, FD stencils are computed by using meshfree interpolations provided by a variant of Radial Basis Function (RBF), known as RBF-Finite-Difference (RBF-FD).  This meshfree version of the FD produces differentiation weights on scattered nodes with high-order accuracy. Our method adapts a quadtree/octree dynamically in a narrow-band around the liquid interface, providing an adaptive particle sampling for the PIC advection step.
 Furthermore, RBF affords an accurate scheme for velocity transfer between the grid and particles, keeping the system's stability and avoiding numerical dissipation.  We also present a data structure that connects the spatial subdivision of a quadtree/octree with the topology of its corresponding dual-graph. Our data structure makes the setup of stencils straightforward, allowing its updating without the need to rebuild it from scratch at each time-step. We show the effectiveness and accuracy of our solver by simulating incompressible inviscid fluids and comparing results with regular PIC-based solvers available in the literature.
