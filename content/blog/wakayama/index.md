@@ -10,7 +10,7 @@ summary= "この交流プログラムの目的は、昔に中南米へ行きま�
 
 +++
 
-{{ images(assets=["images/header.jpg"]) }}
+{{ images(assets=["images/header.JPG"]) }}
 
 # 交流
 
