@@ -4,7 +4,7 @@ template = "about.html"
 paginate_by = 0
 +++
 
-{{ resize_image(path ="/images/guy.jpg", width=400, height=400, class="center border") }}
+{{ resize_image(path ="/images/guy.jpg", width=400, height=500, class="center border") }}
 
 Hello! Thank you for stopping by.
 

@@ -1,7 +1,7 @@
 <div>
   {% set assets = page.assets %}
   {% if reverse %}
-    {% set assets = page.assets | reverse %}
+    {% set assets = page.assets | sort | reverse %}
   {% endif %}
   {% for asset in assets -%}
     {%- if asset is matching("[.](jpg|png)$") -%}
