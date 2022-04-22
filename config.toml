@@ -1,7 +1,7 @@
 theme = "anatole-zola"
 
 # The URL the site will be built for
-base_url = "https://rnakanishi.github.com"
+base_url = "https://rnakanishi.github.io"
 title = "RNakanishi"
 description = "This is a description"
 
