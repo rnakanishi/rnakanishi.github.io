@@ -1,3 +1,5 @@
+$transition-time: .5s;
+
 html {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -64,19 +66,19 @@ img {
   -ms-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: $transition-time;
+  -moz-animation-duration: $transition-time;
+  -ms-animation-duration: $transition-time;
+  -o-animation-duration: $transition-time;
+  animation-duration: $transition-time;
 }
 
 .animated.hinge {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: $transition-time;
+  -moz-animation-duration: $transition-time;
+  -ms-animation-duration: $transition-time;
+  -o-animation-duration: $transition-time;
+  animation-duration: $transition-time;
 }
 
 @-webkit-keyframes fadeInDown {
