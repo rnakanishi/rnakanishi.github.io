@@ -1,0 +1,23 @@
+<style>
+    .author-block {
+        color: #FFF;
+        text-align: justify;
+        padding-top: -1em;
+        /* Trocado o valor de center para justify */
+    }
+
+    .author-item {
+        display: inline-block;
+        padding-right: 1em;
+    }
+</style>
+<h2>Collaborators</h2>
+<div class="author-block">
+    {{ range .Page.Params.extra.authors }}
+    <p class="author-item">
+        <a href={{ .site }}>
+            {{ .name }}
+        </a>
+    </p>
+    {{ end }}
+</div>
